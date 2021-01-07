@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan status Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+	<link rel="stylesheet" href="app.css"> <!-- For running locally -->
+	<!-- <script src="{{ url_for('static',filename='app.js') }}"></script>
+	 <link rel="stylesheet"  href= "{{ url_for('static',filename='app.css') }}"> For integrating Flask and HTML -->
+</head>
+<body>
+<div class="img"></div>
+<form class="form">
+	
+	<h2>Gender</h2> 
+	<div class="switch-field">
+			<input type="radio" id="radio-gen-1" name="uigen" value="1"/>
+			<label for="radio-gen-1">Male</label>
+			<input type="radio" id="radio-gen-0" name="uigen" value="0"/>
+			<label for="radio-gen-0">Female</label>
+	 </div>
+	
+	 <h2>Married</h2>
+		<div class="switch-field">
+			<input type="radio" id="radio-married-1" name="uimarried" value="1"/>
+			<label for="radio-married-1">Yes</label>
+			<input type="radio" id="radio-married-0" name="uimarried" value="0"/>
+			<label for="radio-married-0">No</label>
+	 </div>
+	</form>
+<form class="form">
+	
+	<h2>Dependents</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-dep-0" name="uidep" value="0"/>
+		<label for="radio-dep-0">0</label>
+		<input type="radio" id="radio-dep-1" name="uidep" value="1"/>
+		<label for="radio-dep-1">1</label>
+		<input type="radio" id="radio-bhk-2" name="uidep" value="2"/>
+		<label for="radio-dep-2">2</label>
+		<input type="radio" id="radio-bhk-3" name="uidep" value="3"/>
+		<label for="radio-dep-3">3</label>
+	</div>
+	
+	<h2>Education</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-edu-0" name="uiedu" value="0"/>
+		<label for="radio-edu-0">Not Graduate</label>
+		<input type="radio" id="radio-edu-1" name="uiedu" value="1"/>
+		<label for="radio-edu-1">Graduate</label>
+	</div>
+	
+	<h2>Self_Employed</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-emp-0" name="uiemp" value="0"/>
+		<label for="radio-emp-0">No</label>
+		<input type="radio" id="radio-emp-1" name="uiemp" value="1"/>
+		<label for="radio-emp-1">Yes</label>
+	</div>
+	
+	<h2>Applicant Income</h2>
+   </div>
+    <input class="income"  type="number" id="uiappinc" class="floatLabel" name="Rs" value="1000">
+    </div>
+	
+	<h2>CoApplicant Income</h2>
+    </div>
+    <input class="coincome"  type="number" id="uicoappinc" class="floatLabel" name="Rs" value="1000">
+    </div>
+	
+	<h2>Loan Amount</h2>
+    </div>
+    <input class="Loan"  type="float" id="uiloan" class="floatLabel" name="Rs" value="10">
+    </div>
+	
+	<h2>Loan_Amount_Term(in months)</h2>
+    </div>
+    <input class="Loan_term"  type="number" id="uiloanterm" class="floatLabel" name="months" value="12">
+    </div>
+	
+	<h2>Credit_History</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-credit-0" name="uicredit" value="0.0"/>
+		<label for="radio-credit-0">Yes</label>
+		<input type="radio" id="radio-credit-1" name="uicredit" value="1.0"/>
+		<label for="radio-credit-1">No</label>
+	</div>
+	
+	<h2>Property_Area</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-area-0" name="uiarea" value="0"/>
+		<label for="radio-area-0">Rural</label>
+		<input type="radio" id="radio-area-1" name="uiarea" value="1"/>
+		<label for="radio-area-1">Semiurban</label>
+		<input type="radio" id="radio-area-2" name="uiarea" value="2"/>
+		<label for="radio-area-2">Urban</label>
+    </div>
+
+
+<button type="button" class="submit" onclick="approvalstatuschecker()" >Approval status</button>
+	<div id="uiapprove" class="result">	
+		<h2 ></h2>
+	</div>
+	</form>
+</body>
+</html>

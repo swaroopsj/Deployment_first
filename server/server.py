@@ -41,8 +41,6 @@ def estimated_status():
     return response
 
 
-if __name__ == '__main__':
-    print("starting python flask server for loan status prediction")
-#     os.environ.get('PORT',5000)
-    # util.load_saved_artifacts()
-    app.run(port=port,debug=True,use_reload=False)
+if __name__ == "__main__":
+    print("Starting Python Flask Server For Home Price Prediction...")
+    app.run()

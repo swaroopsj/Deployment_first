@@ -8,6 +8,7 @@ def index():
     if request.method=="GET":
         return render_template("app.html")
 
+
 @app.route('/get_gender')  ## use http://127.0.0.1:5000/hello
 def get_gender():
     response = jsonify({
